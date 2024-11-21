@@ -6,17 +6,24 @@ public class Cheers {
                 String an_list = "AEFHILMNORSX";
                 String output = "";
                 String name_uppercase = "";
+                int upper_letter = 32;
                 for (int i = 0; i<name.length(); i++) {
                         output = "Give me a  ";
-                        name_uppercase += (char) (name.charAt(i)-32);
+                        if (name.charAt(i)+1 > 98) {
+                                upper_letter = 32;
+                        } 
+                        else {
+                                upper_letter = 0;       
+                        }
+                        name_uppercase += (char) (name.charAt(i)-upper_letter);
                         for (int j = 0; j<an_list.length(); j++) {
-                                if (an_list.indexOf((char) (name.charAt(i) - 32)) != -1) {
+                                if (an_list.indexOf((char) (name.charAt(i) - upper_letter)) != -1) {
                                         output = "Give me an ";
                                         break;
                                         
                                 }
                         }                        
-                        System.out.println(output + (char) (name.charAt(i) - 32) + ": " + (char) (name.charAt(i) - 32) + "!");
+                        System.out.println(output + (char) (name.charAt(i) - upper_letter) + ": " + (char) (name.charAt(i) - upper_letter) + "!");
                 }
                 System.out.println("What does that spell?");
                 while (cheers>0) {
