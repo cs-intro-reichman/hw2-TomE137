@@ -9,7 +9,7 @@ public class Cheers {
                 int upper_letter = 32;
                 for (int i = 0; i<name.length(); i++) {
                         output = "Give me a  ";
-                        if (name.charAt(i)+1 > 98) {
+                        if (name.charAt(i)+0 > 96) {
                                 upper_letter = 32;
                         } 
                         else {
