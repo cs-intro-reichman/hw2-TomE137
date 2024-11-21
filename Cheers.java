@@ -14,7 +14,7 @@ public class Cheers {
                                         
                                 }
                         }                        
-                        System.out.println(output + name.charAt(i) + ":" + name.charAt(i) + "!");
+                        System.out.println(output + name.charAt(i) + ": " + name.charAt(i) + "!");
                 }
                 System.out.println("What does that spell?");
                 while (cheers>0) {
